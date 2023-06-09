@@ -1,0 +1,10 @@
+/* Global styles */
+.app {
+  background-image: url('../public/background.svg');
+  background-repeat: no-repeat;
+  background-size: cover; /* Make the background image responsive */
+  background-color: #f7f7f7;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}

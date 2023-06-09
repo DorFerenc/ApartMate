@@ -1,0 +1,11 @@
+/* Footer styles */
+footer {
+  background: rgba(247, 247, 247, 0.5); /* Transparent background color */
+  backdrop-filter: blur(10px); /* Apply a blur effect to the background */
+  color: #200c0c;
+  padding: 20px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}

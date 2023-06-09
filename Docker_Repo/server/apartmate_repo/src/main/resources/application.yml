@@ -1,0 +1,6 @@
+spring:
+  data:
+    mongodb:
+      database: SuperAppMongoDB
+      host: superAppDB
+      port: 27017

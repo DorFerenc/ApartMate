@@ -1,0 +1,49 @@
+version: '3'
+services:
+  superAppDB:
+    image: mongo:latest
+    container_name: superAppDB
+    ports:
+      - '27017:27017'
+
+  server:
+    build:
+      context: server/apartmate_repo
+      dockerfile: Dockerfile
+    container_name: server
+    ports:
+      - '8083:8083'
+    links:
+      - superAppDB:mongo
+    depends_on:
+      - superAppDB
+
+  shop:
+    build:
+      context: client/shopinglist
+      dockerfile: Dockerfile
+    container_name: shop_client
+    ports:
+      - '3000:3000'
+    depends_on:
+      - server
+
+  chat:
+    build:
+      context: client/chat
+      dockerfile: Dockerfile
+    container_name: chat_client
+    ports:
+      - '3001:3001'
+    depends_on:
+      - server
+
+  professional:
+    build:
+      context: client/professionals
+      dockerfile: Dockerfile
+    container_name: professionals_client
+    ports:
+      - '3002:3002'
+    depends_on:
+      - server

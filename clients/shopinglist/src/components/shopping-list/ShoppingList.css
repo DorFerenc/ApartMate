@@ -1,0 +1,109 @@
+.ShoppingList {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    min-height: 75vh;
+    background: rgba(247, 247, 247, 0.5);
+    background-image: url('../../../public/background.svg');
+    backdrop-filter: blur(10px);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .ShoppingList .form-label {
+    text-align: left;
+    /* Add any other desired styles */
+  }
+  
+  .ShoppingList main {
+    width: 90%;
+    max-width: 800px;
+    height: auto; /* Adjusted to auto for better responsiveness */
+    text-align: center;
+    overflow-y: hidden;
+    padding: 2rem;
+    border-radius: 1rem;
+    background: rgba(247, 247, 247, 0.5);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    animation: fade-in 1s forwards;
+  }
+  
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .ShoppingList h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: #060a0c;
+    /* added color for better contrast */
+  }
+  
+  .ShoppingList nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    /* added margin for better spacing */
+  }
+  
+  .ShoppingList nav li {
+    margin: 1rem;
+  }
+  
+  .ShoppingList nav a {
+    font-size: 1.2rem;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    border: 3px solid #060a0c;
+    background-color: #f7f7f7;
+    color: #060a0c;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 200px;
+    height: 100px;
+  }
+  
+  .ShoppingList nav a:hover {
+    background: rgba(247, 247, 247, 0.5);
+    /* Transparent background color */
+    backdrop-filter: blur(10px);
+    /* Apply a blur effect to the background */
+    color: #371212;
+    transform: scale(1.1);
+  }
+  
+  @media screen and (max-width: 600px) {
+    .ShoppingList main {
+      width: 90%;
+      padding: 1rem; /* Decreased padding for better fit on smaller screens */
+    }
+  
+    .ShoppingList h1 {
+      font-size: 2rem;
+    }
+  
+    .ShoppingList nav a {
+      min-width: 150px;
+      height: 80px;
+      padding: 1rem;
+      /* Decreased padding for better fit on smaller screens */
+    }
+  }
+  
